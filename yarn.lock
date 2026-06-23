@@ -1223,7 +1223,7 @@
     enabled "2.0.x"
     kuler "^2.0.0"
 
-"@drift-labs/sdk@npm:@velocity-exchange/sdk@0.0.3":
+"@velocity-exchange/sdk@npm:@velocity-exchange/sdk@0.0.3":
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/@velocity-exchange/sdk/-/sdk-0.0.3.tgz#e15f910e6564aea8b37f32e0f43127267ed93edd"
   integrity sha512-n1CYqk7UCJeMm+nC8DCSiHozVYOunWY8JqXtxfFOA8WTivi81w0iFMTxPS29hswWrBqejpiOEG79tJ8tHaMafQ==

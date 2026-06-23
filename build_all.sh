@@ -16,4 +16,4 @@ yarn clean && yarn && yarn build && yarn link
 cd ../..
 
 echo "building dlob server..."
-yarn clean && yarn link "@drift-labs/sdk" && yarn link "@drift/common" && yarn && yarn build
+yarn clean && yarn link "@velocity-exchange/sdk" && yarn link "@velocity-exchange/common" && yarn && yarn build

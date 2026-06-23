@@ -2,7 +2,7 @@
 # the tagged commit and pushes dlob-server:vX.Y.Z to Velocity ECR. Tags
 # there are IMMUTABLE: a published version can never be overwritten —
 # re-releasing means a new tag. Deploying a version is a separate PR in
-# drift-labs/infrastructure-v3 bumping the gitops image pin.
+# velocity-exchange/infrastructure-v3 bumping the gitops image pin.
 #
 # Every version lands in non-prod ECR. The prod-ECR copy steps are
 # commented out below until the prod account + publish role are ready.
