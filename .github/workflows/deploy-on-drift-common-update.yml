@@ -31,17 +31,17 @@ jobs:
       # Payload: { version: "x.x.x" } - the SDK version
       - name: Add specific version of sdk (from sdk-update)
         if: github.event_name == 'repository_dispatch' && github.event.action == 'sdk-update'
-        run: yarn add @drift-labs/sdk@${{ github.event.client_payload.version }}
+        run: yarn add @velocity-exchange/sdk@${{ github.event.client_payload.version }}
 
       # Handle drift-common-update event (from drift-common repo)
       # Payload: { version: "x.x.x", commit: "...", common-version: "x.x.x" }
       - name: Add specific version of sdk (from drift-common-update)
         if: github.event_name == 'repository_dispatch' && github.event.action == 'drift-common-update' && github.event.client_payload.version
-        run: yarn add @drift-labs/sdk@${{ github.event.client_payload.version }}
+        run: yarn add @velocity-exchange/sdk@${{ github.event.client_payload.version }}
 
       - name: Add specific version of common
         if: github.event_name == 'repository_dispatch' && github.event.client_payload.common-version
-        run: yarn add @drift-labs/common@${{ github.event.client_payload.common-version }}
+        run: yarn add @velocity-exchange/common@${{ github.event.client_payload.common-version }}
 
       - name: Build after new dependency
         if: github.event_name == 'repository_dispatch'
@@ -56,9 +56,9 @@ jobs:
           SDK_VERSION="${{ github.event.client_payload.version }}"
           COMMON_VERSION="${{ github.event.client_payload.common-version }}"
           if [ -n "$COMMON_VERSION" ]; then
-            git commit --allow-empty -m "Bumping @drift-labs/sdk to ${SDK_VERSION} and @drift-labs/common to ${COMMON_VERSION}"
+            git commit --allow-empty -m "Bumping @velocity-exchange/sdk to ${SDK_VERSION} and @velocity-exchange/common to ${COMMON_VERSION}"
           else
-            git commit --allow-empty -m "Bumping @drift-labs/sdk to ${SDK_VERSION}"
+            git commit --allow-empty -m "Bumping @velocity-exchange/sdk to ${SDK_VERSION}"
           fi
 
       - name: Push changes
